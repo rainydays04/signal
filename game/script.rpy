@@ -5,7 +5,7 @@
 
 #octavia defintions
 define o = Character("Octavia")
-image octavia happy = "octavia-happy.png"
+image octavia happy = im.Scale("octavia-happy.png",1000,1000)
 
 
 
