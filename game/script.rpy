@@ -7,30 +7,25 @@
 define o = Character("Octavia")
 image octavia happy = im.Scale("octavia-happy.png",1000,1000)
 
+#not important
+define mom = Character("Mom",color="#808080", what_color="#000000")
+
+#background defintions
+image bg bedroom = im.Scale("bedroom.png",1920,1080)
+image bg empty = im.Scale("empty.png",1920,1080)
+
 
 
 # The game starts here.
 
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene bg room
-
-    # This shows a character sprite. A placeholder is used, but you can
-    # replace it by adding a file named "eileen happy.png" to the images
-    # directory.
-
+    show bg empty
+    #alarm clock sound when I find out how to do that
+    show bg bedroom
     show octavia happy
+    o "Almost...done with the finshing touches"
+    mom "Octavia wake- oh"
 
-    # These display lines of dialogue.
 
-    o "You've created a new Ren'Py game."
-
-    o "Once you add a story, pictures, and music, you can release it to the world!"
-
-    # This ends the game.
 
     return
