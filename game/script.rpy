@@ -4,7 +4,7 @@
 # name of the character.
 
 define e = Character("Eileen")
-define s =Character ("test")
+
 
 
 # The game starts here.
