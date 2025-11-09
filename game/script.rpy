@@ -6,6 +6,7 @@
 #character defintions
 define o = Character("Octavia") #add colors!!
 define a = Character("Alexie")
+
 image octavia = im.Scale("octavia-happy.png",1000,1000)
 image octavia s = im.Scale("octavia-speaking.png",1000,1000)
 image alexie = im.Scale("alexie-happy.png",1000,1000)
@@ -29,6 +30,8 @@ label start:
     show bg empty
     #alarm sounds if i figure it out
     show bg bedroom
+    show octavia
+    narrator "It's about 5 am and Octavia is at her desk writing on a...bookmark?"
     show octavia s
     o "Just a few more touches..."
     show octavia
@@ -36,8 +39,13 @@ label start:
     show octavia s
     o "I'm up, just let me finish this"
     show octavia 
-    mom "{i}Raises eyebrows{i} alright then, have fun at school{i}Leaves{i}"
+    mom "{i}Raises eyebrows{i} alright then, have fun at school {i}Leaves{i}"
     #i really hate the direction this is taking
+    narrator "Octavia, productive as ever, takes another 30 minutes writing and erasing on this bookmark of hers"
+    
+
+
+
 
 
     
