@@ -94,3 +94,20 @@ label regular_morning:
     hide octavia
     show bg school-front
     show octavia with moveinright
+    o "Hope im not late for class-"
+    narrator "Octavia collides into a person walking in the opposite direction"
+    show alexie with with moveinleft
+    o"Oh my gosh, I am so sorr!"
+    narrator"She leans down and helps pick up the books that fell"
+    a "It's okay, no harm done"
+    narrator "As Octavia looks up, she notices that the person is an unfamilar face"
+    o "Wait, are you new here?"
+    a "Yeah actually, I transferred today"
+    o"Today? Wow, welcome to our school!"
+    narrator"The girl laughs softly"
+    a "Thanks, I'm Alexie by the way"
+    narrator"Octavia smiles warmly back and holds out a hand"
+    o"I'm Octavia, nice to meet you"
+    #first bell rings
+    a"Oh no, does that mean we're late?"
+    
