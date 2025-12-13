@@ -23,6 +23,7 @@ define mom = Character("Mom",color="#808080", what_color="#000000")
 image bg bedroom = im.Scale("bedroom.png",1920,1080)
 image bg empty = im.Scale("empty.png",1920,1080)
 image bg school-front = im.Scale("school-front.png",1920,1080)
+image bg school = im.Scale("school.png",1920,1080)
 
 
 
