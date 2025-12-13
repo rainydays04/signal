@@ -20,6 +20,8 @@ define mom = Character("Mom",color="#808080", what_color="#000000")
 #background defintions
 image bg bedroom = im.Scale("bedroom.png",1920,1080)
 image bg empty = im.Scale("empty.png",1920,1080)
+image bg empty = im.Scale("school-front.png",1920,1080)image bg empty = im.Scale("school-front.png",1920,1080)
+
 
 
 
@@ -28,27 +30,29 @@ image bg empty = im.Scale("empty.png",1920,1080)
 label start:
     #ok change of plans, dream setting
     show bg empty
-    #alarm sounds if i figure it out
     show bg bedroom
     show octavia
-    narrator "It's about 5 am and Octavia is at her desk writing on a...bookmark?"
-    show octavia s
-    o "Just a few more touches..."
-    show octavia
-    mom "Octavia wake up-{w}oh"
-    show octavia s
-    o "I'm up, just let me finish this"
-    show octavia 
-    mom "{i}Raises eyebrows{i} alright then, have fun at school {i}Leaves{i}"
-    #i really hate the direction this is taking
-    narrator "Octavia, productive as ever, takes another 30 minutes writing and erasing on this bookmark of hers"
-    
+    #alarm noise
+    o"Ughh.... What time is it"
+    narrator "Octavia turns to see her clock, of which reades 4:30 AM."
+    o"Oh this is way to early, but to be fair I did sleep early last night"
+    o"I could sleep a few more hours or I can get ready now"
+    menu:
+        "Sleep for a few more hours":
+            o"I think I'll sleep a bit longer, let me just fix my alarm"
+            show bg empty
+            hide octavia
+            jump regular_morning
 
 
-    
-    
-
-
-
+        "Get ready now":
+            o"I have enough sleep, might as well take this time to get ready"
+            narrator "Octavia gets out of bed and prepares for the day ahead of her"
+            jump early_morning
 
     return
+
+label early_morning:
+    hide octavia
+    show bg school
+
