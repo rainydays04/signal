@@ -129,7 +129,7 @@ label school_intro:
         show octavia at right
         narrator "The school bell rang and Octavia took her seat, glancing anxiously at the empty desk beside her"
         narrator "A girl with short brown hair and glasses enter, looks around, and sees the empty desk"
-        show alexie at with moveinleft
+        show alexie at left with moveinleft
         a "Hi, is this seat taken?"
         narrator "Octavia shakes her head and smiles warmly"
         narrator "Alexie takes her seat and notices something on her desk"
