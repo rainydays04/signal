@@ -101,11 +101,12 @@ label regular_morning:
     narrator "Octavia gets out of bed and prepares for the day"
     hide octavia
     show bg school-front
+    #fix postioning with octavia and alexie 😅
     show octavia with moveinright
     o "Hope im not late for class-"
     narrator "Octavia collides into a person walking in the opposite direction"
     show alexie with moveinleft
-    o"Oh my gosh, I am so sorr!"
+    o"Oh my gosh, I am so sorry!"
     narrator"She leans down and helps pick up the books that fell"
     a "It's okay, no harm done"
     narrator "As Octavia looks up, she notices that the person is an unfamilar face"
@@ -124,10 +125,19 @@ label regular_morning:
     jump school_intro
 
 label school_intro:
-    if gift=="note":
-        a"test1"
-    elif gift=="snack":
-        a"test2"
+    if gift != "none":
+        show octavia at right
+        narrator "The school bell rang and Octavia took her seat, glancing anxiously at the empty desk beside her"
+        narrator "A girl with short brown hair and glasses enter, looks around, and sees the empty desk"
+        show alexie at with moveinleft
+        a "Hi, is this seat taken?"
+        narrator "Octavia shakes her head and smiles warmly"
+        narrator "Alexie takes her seat and notices something on her desk"
+        if gift=="note":
+            narrator "She picks up the sticky note and read it, a small smile dawning on her face"
+            narrator "She looked over at Octavia and mouthed a small thank you"
+        elif gift=="snack":
+            a"test2"
     else:
         a"test3"
     
