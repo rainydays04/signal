@@ -24,6 +24,7 @@ image bg bedroom = im.Scale("bedroom.png",1920,1080)
 image bg empty = im.Scale("empty.png",1920,1080)
 image bg school-front = im.Scale("school-front.png",1920,1080)
 image bg school = im.Scale("school.png",1920,1080)
+image bg schoolyard = im.Scale("yard.png",1920,1080)
 
 #Variables
 default alexie_relation=0
@@ -145,5 +146,10 @@ label school_intro:
     else:
         a"Thank you for the warm welcome and showing me to class"
         o "Of course! If you need anything else feel free to ask me"
+    return
+
+label school_day1_end:
+    show bg schoolyard
+    
         
     
