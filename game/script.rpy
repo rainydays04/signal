@@ -110,4 +110,5 @@ label regular_morning:
     o"I'm Octavia, nice to meet you"
     #first bell rings
     a"Oh no, does that mean we're late?"
-    
+    o"No we still have a few minutes, I can show you to your class"
+    narrator "Alexia nodded gratefully as Octavia led her into the school building"
