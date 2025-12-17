@@ -125,6 +125,7 @@ label regular_morning:
     jump school_intro
 
 label school_intro:
+    show bg school
     if gift != "none":
         show octavia at right
         narrator "The school bell rang and Octavia took her seat, glancing anxiously at the empty desk beside her"
@@ -136,8 +137,13 @@ label school_intro:
         if gift=="note":
             narrator "She picks up the sticky note and read it, a small smile dawning on her face"
             narrator "She looked over at Octavia and mouthed a small thank you"
+            $ alexie_relation +=10
         elif gift=="snack":
-            a"test2"
+            narrator "Alexie sat at her desk and noticed a granola bar while Octavia watched from the corner of her eye"
+            narrator "She looked at the snack and then at Octavia, nodding in appreciation"
+            $ alexie_relation +=5
     else:
-        a"test3"
+        a"Thank you for the warm welcome and showing me to class"
+        o "Of course! If you need anything else feel free to ask me"
+        
     
