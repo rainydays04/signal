@@ -79,7 +79,7 @@ label early_morning:
             o"Yeah, maybe that would be nice, what should I give her?"
             menu:
                 "Welcome note":
-                    $ gift_given= "note"
+                    $ gift= "note"
                     o"I think a welcome note would be nice to leave her"
                     narrator"Octavia quickly scribbles on a sticky note  and leaves it on the desk"
 
