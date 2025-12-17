@@ -146,10 +146,11 @@ label school_intro:
     else:
         a"Thank you for the warm welcome and showing me to class"
         o "Of course! If you need anything else feel free to ask me"
+    jump school_day1_end
     return
 
 label school_day1_end:
     show bg schoolyard
-    
+
         
     
