@@ -151,6 +151,7 @@ label school_intro:
 
 label school_day1_end:
     show bg schoolyard
+    show octavia at center
     return
 
         
