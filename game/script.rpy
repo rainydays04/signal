@@ -27,7 +27,7 @@ image bg school = im.Scale("school.png",1920,1080)
 
 #Variables
 default alexie_relation=0
-
+default gift="none"
 
 
 
@@ -124,9 +124,10 @@ label regular_morning:
     jump school_intro
 
 label school_intro:
-    if gift="snack":
-        a"test"
-    else if gift="note":
+    if gift=="note":
+        a"test1"
+    elif gift=="snack":
         a"test2"
     else:
         a"test3"
+    
