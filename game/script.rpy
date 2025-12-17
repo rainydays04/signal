@@ -25,6 +25,10 @@ image bg empty = im.Scale("empty.png",1920,1080)
 image bg school-front = im.Scale("school-front.png",1920,1080)
 image bg school = im.Scale("school.png",1920,1080)
 
+#Variables
+default alexie_relation=0
+
+
 
 
 
@@ -75,12 +79,16 @@ label early_morning:
             o"Yeah, maybe that would be nice, what should I give her?"
             menu:
                 "Welcome note":
+                    $ gift_given= "note"
                     o"I think a welcome note would be nice to leave her"
                     narrator"Octavia quickly scribbles on a sticky note  and leaves it on the desk"
+
                 "Snacks":
+                    $ gift="snack"
                     o"Morning classes can be rough, perhaps a snack would be able to help her out"
                     narrator"Octavia grabs a granola bar from her bag and leave it on the desk"
             narrator"Octavia looks up anxiously at the clock, metally timing for when the late bell will ring, and when the student will arrive"
+    jump school_intro
     return
 
 label regular_morning:
@@ -96,7 +104,7 @@ label regular_morning:
     show octavia with moveinright
     o "Hope im not late for class-"
     narrator "Octavia collides into a person walking in the opposite direction"
-    show alexie with with moveinleft
+    show alexie with moveinleft
     o"Oh my gosh, I am so sorr!"
     narrator"She leans down and helps pick up the books that fell"
     a "It's okay, no harm done"
@@ -112,3 +120,13 @@ label regular_morning:
     a"Oh no, does that mean we're late?"
     o"No we still have a few minutes, I can show you to your class"
     narrator "Alexia nodded gratefully as Octavia led her into the school building"
+
+    jump school_intro
+
+label school_intro:
+    if gift="snack":
+        a"test"
+    else if gift="note":
+        a"test2"
+    else:
+        a"test3"
