@@ -148,7 +148,7 @@ label school_intro:
         o "Of course! If you need anything else feel free to ask me"
     hide octavia
     hide alexie
-    jump school_day1_end
+jump school_day1_end
     return
 
 label school_day1_end:
