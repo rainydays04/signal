@@ -146,6 +146,8 @@ label school_intro:
     else:
         a"Thank you for the warm welcome and showing me to class"
         o "Of course! If you need anything else feel free to ask me"
+    hide octavia
+    hide alexie
     jump school_day1_end
     return
 
