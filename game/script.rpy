@@ -103,10 +103,10 @@ label regular_morning:
     hide octavia
     show bg school-front
     #fix postioning with octavia and alexie 😅
-    show octavia with moveinright
+    show octavia at right with moveinright
     o "Hope im not late for class-"
     narrator "Octavia collides into a person walking in the opposite direction"
-    show alexie with moveinleft
+    show alexie at left with moveinleft
     o"Oh my gosh, I am so sorry!"
     narrator"She leans down and helps pick up the books that fell"
     a "It's okay, no harm done"
@@ -148,12 +148,13 @@ label school_intro:
         o "Of course! If you need anything else feel free to ask me"
     hide octavia
     hide alexie
-jump school_day1_end
+    jump lunch_day1
     return
 
-label school_day1_end:
+label lunch_day1:
     show bg schoolyard
     show octavia at center
+    narrator "During lunch break, Octavia sat with her friends in the schoolyard"
     return
 
         
