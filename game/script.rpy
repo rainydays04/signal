@@ -155,6 +155,9 @@ label lunch_day1:
     show bg schoolyard
     show octavia at center
     narrator "During lunch break, Octavia sat with her friends in the schoolyard"
+    narrrator "She glanced over at Alexie, who was sitting alone at a nearby table"
+    menu:
+        ""
     return
 
         
