@@ -153,12 +153,48 @@ label school_intro:
 
 label lunch_day1:
     show bg schoolyard
-    show octavia at center
+    show octavia at right
     narrator "During lunch break, Octavia sat with her friends in the schoolyard"
     narrrator "She glanced over at Alexie, who was sitting alone at a nearby table"
+    show alexie at left
     menu:
-        ""
+        "Why are you sitting alone?"
+        "You should come sit with us!"
+    narrator "Alexie looks over and smiles softly, shaking her head quietly and returns to her food"
+    o"Oh...Maybe next time then"
+    narrator "Octavia feels a bit disappointed, but decides to enjoy her lunch with her friends"
+    show octavia moveoutleft
+    hide alexie
+    hide bg schoolyard
+    jump afternoon_day1
     return
+
+label afternoon_day1:
+    show bg school
+    show octavia at center
+    c "Octavia, did you finish the math homework from yesterday?"
+    narrator "Octavia was looking wistfully at her silent and distant deskmate"
+    c "Helllo? Earth to Octavia!"
+    o "Oh! Sorry Cynthia. What were you saying?"
+    narrator "Cynthia raised an eyebrow"
+    c "Something on your mind?"
+    o "Yeah kinda. I was just wondering about the new student, you know, Alexie?"
+    c "Ohhhhh, yeah. You didn't hear? She is hella smart, but has difficulty talking to others"
+    narrator "Octavia cocked her head"
+    o"Really? She seemed rather sociable to me earlier"
+    narrator "Cynthia shrugged"
+    c "I can't speak on her behalf, but you seem rather interested in her"
+    o "I just wanna get to know her better, she seems nice"
+    narrator "Cynthia went back to her work as Alexie came into the classroom"
+    hide octavia
+    hide bg school
+    show bg empty
+    jump library_day1
+    return
+
+label library_day1:
+    
+
 
         
     
