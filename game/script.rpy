@@ -155,12 +155,14 @@ label lunch_day1:
     show bg schoolyard
     show octavia at right
     narrator "During lunch break, Octavia sat with her friends in the schoolyard"
-    narrrator "She glanced over at Alexie, who was sitting alone at a nearby table"
+    narrator "She glanced over at Alexie, who was sitting alone at a nearby table"
     show alexie at left
     menu:
-        "Why are you sitting alone?"
-        "You should come sit with us!"
-    narrator "Alexie looks over and smiles softly, shaking her head quietly and returns to her food"
+        "Why are you sitting alone?":
+            narrator "Alexie looks over and smiles softly, shaking her head quietly and returns to her food"
+        "You should come sit with us!": 
+            narrator "Alexie looks over and smiles softly, shaking her head quietly and returns to her food"
+   
     o"Oh...Maybe next time then"
     narrator "Octavia feels a bit disappointed, but decides to enjoy her lunch with her friends"
     show octavia moveoutleft
@@ -193,6 +195,7 @@ label afternoon_day1:
     return
 
 label library_day1:
+    narrator ""
     
 
 
