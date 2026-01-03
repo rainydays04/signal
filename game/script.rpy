@@ -165,7 +165,7 @@ label lunch_day1:
    
     o"Oh...Maybe next time then"
     narrator "Octavia feels a bit disappointed, but decides to enjoy her lunch with her friends"
-    show octavia moveoutleft
+    hide octavia with moveoutleft
     hide alexie
     hide bg schoolyard
     jump afternoon_day1
