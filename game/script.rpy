@@ -31,6 +31,7 @@ image bg library = im.Scale("library.png",1920,1080)
 #Variables
 default alexie_relation=0
 default gift="none"
+default movie=False
 
 
 
@@ -90,7 +91,9 @@ label early_morning:
                     $ gift="snack"
                     o"Morning classes can be rough, perhaps a snack would be able to help her out"
                     narrator"Octavia grabs a granola bar from her bag and leave it on the desk"
-            narrator"Octavia looks up anxiously at the clock, metally timing for when the late bell will ring, and when the student will arrive"
+                    narrator"Octavia looks up anxiously at the clock, metally timing for when the late bell will ring, and when the student will arrive"
+                "Do not leave a gift":
+                    jump school_intro
     jump school_intro
     return
 
@@ -216,12 +219,26 @@ label library_day1:
             a"I was actually going to see the next showing of 'The Conjuring 2' this weekend"
             menu:
                 "recommend a similar book":
-                    
+                    o"The book 'The Hauting of Ninth Avenue' has a similar plot, you might like it!"
+                    $alexie_relation +=5
                 "Ask about the movie":
-
+                    o"Oh? I love 'The Conjuring' series. I didn't know they were bringing it back in theaters"
+                    a"Yeah, I got two tickets, but my friend bailed since she hard it was scary"
+                    menu:
+                        "Offer to go together":
+                            $ movie=True
+                            o"I'd be willing to go with you if you'd like. I'll bring some snacks too"
+                            a"Really? That'd be great! Here is my number, I'll send the plans later this afternoon"
         "stay silent":
+            narrator"Octavia, too nervous to speak, simply nodded and continued her work"
+            narrator "Alexie, already comfortable in the silence, joined her in organizing the books"
+    hide octavia
+    hide alexie
+    jump end_day1
 
-    
+label end_day1:
+    show bg bedroom
+    show octavia
 
 
         
