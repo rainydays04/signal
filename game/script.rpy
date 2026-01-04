@@ -8,12 +8,13 @@ define o = Character("Octavia") #add colors!!
 define a = Character("Alexie")
 define c = Character("Cynthia", color="#ff69b4")
 define l = Character("Lilith", color="#8a2be2")
+define li = Character("Librarian", color="#deb887")
 
 image octavia = im.Scale("octavia-happy.png",1000,1000)
 image octavia s = im.Scale("octavia-speaking.png",1000,1000)
 image alexie = im.Scale("alexie-happy.png",1000,1000)
 image alexie s= im.Scale("alexie-speaking.png",1000,1000)
-
+image librarian= im.Scale("librarian.png",1000,1000)
 
 
 #not important
@@ -25,6 +26,7 @@ image bg empty = im.Scale("empty.png",1920,1080)
 image bg school-front = im.Scale("school-front.png",1920,1080)
 image bg school = im.Scale("school.png",1920,1080)
 image bg schoolyard = im.Scale("yard.png",1920,1080)
+image bg library = im.Scale("library.png",1920,1080)
 
 #Variables
 default alexie_relation=0
@@ -195,7 +197,30 @@ label afternoon_day1:
     return
 
 label library_day1:
-    narrator ""
+    show bg library
+    show octavia at left
+    narrator "After school, Octavia went to fullfill her weekly library duties"
+    narrator "As she was organizing books, the librarrian approached her, Alexie trailing behind"
+    show libraian at right with moveinright
+    li "Octavia, just who I was looking for"
+    li "I'm sure you met Alexie earlier today. She said she was interested in the library program"
+    narrator "The librarian left Alexie and Octavia alone to work"
+    hide librarian with moveoutright
+    show alexie at right with moveinright
+    menu:
+        "offer help":
+            narrator"Octavia explained the process of checking out books and offered to help Alexie find some books that she might like"
+        "ask about interests":
+            narrator"Octavia asked Alexie about her interests and suggested some books she might like"
+            a"I really like horror and mystery novels"
+            a"I was actually going to see the next showing of 'The Conjuring 2' this weekend"
+            menu:
+                "recommend a similar book":
+                    
+                "Ask about the movie":
+
+        "stay silent":
+
     
 
 
