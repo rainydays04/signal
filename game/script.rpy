@@ -92,8 +92,8 @@ label early_morning:
                     o"Morning classes can be rough, perhaps a snack would be able to help her out"
                     narrator"Octavia grabs a granola bar from her bag and leave it on the desk"
                     narrator"Octavia looks up anxiously at the clock, metally timing for when the late bell will ring, and when the student will arrive"
-                "Do not leave a gift":
-                    jump school_intro
+        "Do not leave a gift":
+            jump school_intro
     jump school_intro
     return
 
