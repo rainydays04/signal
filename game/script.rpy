@@ -259,7 +259,7 @@ label day2_start:
     show octavia at right
     show alexie at left with moveinleft
     narrator "As Octavia was trying to approch her, she realized Alexie was mumbling something to herself"
-    narraotor "She saw that Alexie was...talking to herself about..."
+    narrator "She saw that Alexie was...talking to herself about..."
     a"You said you wouldn't follow me today..."
     w"I just need to make sure you're safe. The organization can't let anything happen to you"
     o"{i}Organization? What is she talking about?{/i}"
