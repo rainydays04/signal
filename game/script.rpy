@@ -368,6 +368,15 @@ label day2_lunch:
         "Stay silent":
             o"Yeah it just reminded me of something from a tv show I watched"
             narrator "Alexie nodded, accepting the explantion, but it still seemed slightly bothered"
+    o "Do you want to sit with me? I don't mind the company. I usuall eat alone on Fridays since my friends have a club meeting at this time"
+    a "Sure, thanks"
+    jump day2_after
+
+label day2_after:
+    hide octavia
+    hide alexie
+    show bg empty
+    
     
 
     
