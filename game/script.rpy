@@ -9,6 +9,7 @@ define a = Character("Alexie")
 define c = Character("Cynthia", color="#ff69b4")
 define l = Character("Lilith", color="#8a2be2")
 define li = Character("Librarian", color="#deb887")
+define w = Character("????", color="#ff0000")
 
 image octavia = im.Scale("octavia-happy.png",1000,1000)
 image octavia s = im.Scale("octavia-speaking.png",1000,1000)
@@ -27,6 +28,7 @@ image bg school-front = im.Scale("school-front.png",1920,1080)
 image bg school = im.Scale("school.png",1920,1080)
 image bg schoolyard = im.Scale("yard.png",1920,1080)
 image bg library = im.Scale("library.png",1920,1080)
+image bg sidewalk = im.Scale("sidewalk.png",1920,1080)
 
 #Variables
 default alexie_relation=0
@@ -137,7 +139,7 @@ label school_intro:
     narrator "A girl with short brown hair and glasses enter, looks around, and sees the empty desk"
     show alexie at left with moveinleft
     a "Hi, is this seat taken?"
-        narrator "Octavia shakes her head and smiles warmly"
+    narrator "Octavia shakes her head and smiles warmly"
     if gift != "none":
         narrator "Alexie takes her seat and notices something on her desk"
         if gift=="note":
@@ -204,7 +206,7 @@ label library_day1:
     show octavia at left
     narrator "After school, Octavia went to fullfill her weekly library duties"
     narrator "As she was organizing books, the librarrian approached her, Alexie trailing behind"
-    show libraian at right with moveinright
+    show librarian at right with moveinright
     li "Octavia, just who I was looking for"
     li "I'm sure you met Alexie earlier today. She said she was interested in the library program"
     narrator "The librarian left Alexie and Octavia alone to work"
@@ -245,6 +247,54 @@ label end_day1:
         a"Hey Octavia. This is Alexie. The movie starts at 7pm on Saturday at the Grand Cinema. See you then!"
     else:
         narrator"She reflects on the day and wonders how she can get to know Alexie better"
+    jump day2_start
+
+
+label day2_start:
+    hide octavia
+    show bg empty
+    narrator "The next day, Octavia is walking towards the school when she saw Alexie"
+    show bg sidewalk
+    show octavia at right
+    show alexie at left with moveinleft
+    narrator "As Octavia was trying to approch her, she realized Alexie was mumbling something to herself"
+    narraotor "She saw that Alexie was...talking to herself about..."
+    a"You said you wouldn't follow me today..."
+    w"I just need to make sure you're safe. The organization can't let anything happen to you"
+    o"{i}Organization? What is she talking about?{/i}"
+    menu:
+        "Confront her about it":
+            o"Alexie, whoa re you talking to?"
+            narrator"Alexie jumps slightly, startles by Octavia's sudden presence"
+            a"Oh,nobody. Nobody, just talkig to myself"
+            narrator "From behind her a black cat darts away"
+            a"Are you headed to school too?"
+            o"Yeah, wanna walk together?"
+            a "Sure"
+        "Stay silent and see what happens":
+            a "They promised me I would be safe and could just go to school"
+            w"You know we still need to monitor you. Just in case anything happens"
+            a "I don't need monitoring, I can take care of myself"
+            if movie==True:
+                w"What about that girl you invited to the movies? How are you sure she is trustworthy?"
+                a "She's fine...strangely sociable, but fine"
+            else:
+                w"What about the people you interact with at school? How are you sure they are trustworthy?"
+                a "They're fine...People leave me alone for the most part, so I'm fine"
+            narrator "As Alexie spoke, Octavia noticed a black cat sitting in front of Alexie, seeming to be the one talking"
+            narrator"The cat darts away as it notcies Octavia causing Alexie to turn behind her"
+            menu:
+                "Approach Alexie":
+                    o"Alexie, whoa re you talking to?"
+                    narrator"Alexie jumps slightly, startles by Octavia's sudden presence"
+                    a"Oh,nobody. Nobody, just talkig to myself"
+                    narrator "From behind her a black cat darts away"
+                    a"Are you headed to school too?"
+                    o"Yeah, wanna walk together?"
+                    a "Sure"
+                "Run away":
+                    narrator"Before Alexie could notice her, Octavia quickly hurried away from towards the school"
+                    hide octavie with moveoutright
 
 
 
