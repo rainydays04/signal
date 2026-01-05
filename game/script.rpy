@@ -132,13 +132,13 @@ label regular_morning:
 
 label school_intro:
     show bg school
-    if gift != "none":
-        show octavia at right
-        narrator "The school bell rang and Octavia took her seat, glancing anxiously at the empty desk beside her"
-        narrator "A girl with short brown hair and glasses enter, looks around, and sees the empty desk"
-        show alexie at left with moveinleft
-        a "Hi, is this seat taken?"
+    show octavia at right
+    narrator "The school bell rang and Octavia took her seat, glancing anxiously at the empty desk beside her"
+    narrator "A girl with short brown hair and glasses enter, looks around, and sees the empty desk"
+    show alexie at left with moveinleft
+    a "Hi, is this seat taken?"
         narrator "Octavia shakes her head and smiles warmly"
+    if gift != "none":
         narrator "Alexie takes her seat and notices something on her desk"
         if gift=="note":
             narrator "She picks up the sticky note and read it, a small smile dawning on her face"
@@ -239,6 +239,13 @@ label library_day1:
 label end_day1:
     show bg bedroom
     show octavia
+    narrator "Octavia returned to her home for the day"
+    if movie==True:
+        narrator"she gets a text from Alexie with the movie plans"
+        a"Hey Octavia. This is Alexie. The movie starts at 7pm on Saturday at the Grand Cinema. See you then!"
+    else:
+        narrator"She reflects on the day and wonders how she can get to know Alexie better"
+
 
 
         
