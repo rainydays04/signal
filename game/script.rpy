@@ -34,6 +34,7 @@ image bg sidewalk = im.Scale("sidewalk.png",1920,1080)
 default alexie_relation=0
 default gift="none"
 default movie=False
+default sus =False
 
 
 
@@ -271,7 +272,9 @@ label day2_start:
             a"Are you headed to school too?"
             o"Yeah, wanna walk together?"
             a "Sure"
+            jump day2_walk
         "Stay silent and see what happens":
+            $ sus =True
             a "They promised me I would be safe and could just go to school"
             w"You know we still need to monitor you. Just in case anything happens"
             a "I don't need monitoring, I can take care of myself"
@@ -292,9 +295,82 @@ label day2_start:
                     a"Are you headed to school too?"
                     o"Yeah, wanna walk together?"
                     a "Sure"
+                    jump day2_walk
                 "Run away":
                     narrator"Before Alexie could notice her, Octavia quickly hurried away from towards the school"
                     hide octavie with moveoutright
+                    jump day2_school
+label day2_walk:
+    hide alexie
+    hide octavia
+    show bg school
+    narrator "Octavia and Alexie walked to school together, the earlier incident left Octavia feeling curious about Alexie"
+    show octavia at right with moveinright
+    show alexie at left with moveinright
+    a "So how much did you hear?"
+    o "Honestly, not much. Just you talking to someone and a cat"
+    if sus==True:
+        o"And something about an organization?"
+        a"..."
+        narrator "Alexie hesitated for a moment, looking around if anyone was listening"
+        narrator "She pulled Octavia to the side and whispered"
+        a "Look, I don't know how much you heard, bu I cannot tell you much about it"
+        a "Just do not mention it to anyone else, okay? Especially the cat"
+        narrator "Octavia nodded, feeling more confused than before"
+    else:
+        narrator"Alexie raised her eyebrows"
+        a "I see.. well, it's a long story I'll share with you another time"
+        o "Alright, sure, no rush"
+    jump day2_lunch
+
+
+
+label day2_school:
+    hide alexie
+    hide octavia
+    show bg school
+    narrator "Octavia entered the school building, heading towards her desk"
+    narrator "She watched as Alexie entered the classroom and took her seat"
+    jump day2_after
+
+label day2_lunch:
+    hide octavia
+    hide alexie
+    show bg schoolyard
+    narrator "The rest of the day passed by uneventfully until lunch break"
+    show octavia at right
+    narrator "Octavia was writing in her notebook when she looked up and noticed a black cat sitting on a nearby bench"
+    o"{i}Isn't that the cat from this morning?{/i}"
+    narrator "The cat seemed to star at her, unblinking, as it approached her"
+    w "You shouldn't talk to her"
+    o"{i}What the...did that cat just talk?{/i}"
+    narrator "She stared down at the cat, unsure how to respond"
+    w"She is dangerous you know. You shouldn't trust her"
+    o"Who are you?"
+    narrator "The cat simply smiled up at her"
+    w "I'm just looking out for the both of you"
+    narrator "Before Octavia could respond, Alexie approached just as the cat darted away once more"
+    show alexie at left with moveinleft
+    a "Hey, is everything okay? You're not sitting with youre usual friends"
+    o "Yeah, everything's fine. Just saw a cat I recognized"
+    narrator"At the mention of a cat, Alexie's expression darkened slightly"
+    a "A cat you say?"
+    narrator"Octavia nodded as Alexie looked at her, waiting for more information"
+    menu:
+        "Tell her about the cat":
+            o"Yeah it was a black cat, seemed to be trying to warn me about something"
+            narrator"Alexie mumbled under her breath"
+            a"I can't even catch a break..."
+            o"What do you mean by that?"
+            narrator "Alexie shook her head"
+            a "It's nothing"
+            narrator"Octavia felt that Alexie was hiding something, but decided not to press the issue"
+        "Stay silent":
+            o"Yeah it just reminded me of something from a tv show I watched"
+            narrator "Alexie nodded, accepting the explantion, but it still seemed slightly bothered"
+    
+
+    
 
 
 
