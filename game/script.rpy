@@ -35,6 +35,8 @@ default alexie_relation=0
 default gift="none"
 default movie=False
 default sus =False
+default info_1=False
+default cat_1=False
 
 
 
@@ -301,6 +303,7 @@ label day2_start:
                     hide octavie with moveoutright
                     jump day2_school
 label day2_walk:
+    $ info_1=True
     hide alexie
     hide octavia
     show bg school
@@ -337,6 +340,7 @@ label day2_lunch:
     hide octavia
     hide alexie
     show bg schoolyard
+
     narrator "The rest of the day passed by uneventfully until lunch break"
     show octavia at right
     narrator "Octavia was writing in her notebook when she looked up and noticed a black cat sitting on a nearby bench"
@@ -376,6 +380,28 @@ label day2_after:
     hide octavia
     hide alexie
     show bg empty
+    narrator "The rest of the day passed uneventfully"
+    show bg bedroom
+    show octavia
+    narrator "Octavia prepared to study at her desk"
+    if info_1==True:
+        narrator"As Octavia worked on her schoolwork, she wondered about Alexie and what the cat had warned her"
+        o"{i}Be careful around her? What harm could possibly come of a high schooler could do? {/i}"
+        narrator"Octavia leaned back in her chair and thought about it more"
+        o"Back to think about it, why and how was the cat talking to me. I was so in shock that I never questioned it"
+        narrator "Distracted from her work, she began to research into Alexie, but before she could finish up she got a tect"
+        if movie==True:
+            narrator"Alexie: Still on for the movie tomorrow?"
+            narrator"Octavia: Sure yeah"
+            narrator"Alexie: Yeah I was just curious after the whole cat thing"
+            narrator"Octavia: You wanna talk more about that cat thing? It seems rather important to you, Sailor Moon"
+            narrator"Alexie: I'll talk about it at the movies"
+        else:
+            narrator "Alexie: Hey you want to talk, You seemed kinda distracted at lunch"
+            narrator"Octavia: Nothing, it's probably just that my friends were out and I was kinda tired"
+            narrator""
+    else:
+
     
     
 
