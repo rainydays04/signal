@@ -29,6 +29,9 @@ image bg school = im.Scale("school.png",1920,1080)
 image bg schoolyard = im.Scale("yard.png",1920,1080)
 image bg library = im.Scale("library.png",1920,1080)
 image bg sidewalk = im.Scale("sidewalk.png",1920,1080)
+image bg movie = im.Scale("movies.png",1920,1080)
+image bg movie = im.Scale("movies.png",1920,1080)
+
 
 #Variables
 default alexie_relation=0
@@ -37,6 +40,7 @@ default movie=False
 default sus =False
 default info_1=False
 default cat_1=False
+default genre="none"
 
 
 
@@ -397,17 +401,69 @@ label day2_after:
             narrator"Octavia: You wanna talk more about that cat thing? It seems rather important to you, Sailor Moon"
             narrator"Alexie: I'll talk about it at the movies"
         else:
+            $ movie=True
             narrator "Alexie: Hey you want to talk, You seemed kinda distracted at lunch"
             narrator"Octavia: Nothing, it's probably just that my friends were out and I was kinda tired"
-            narrator""
+            narrator"Alexie: How about you come to the movie I'm going to tomorrow? It's a horror"
+            o"{i}Didn't the cat tell me not to...{/i}"
+            menu:
+                "Accept her request":
+                    narrator"Octavia: Sure, I'm not during anything"
+                    narrator"Alexie: Great, here is the address"
+                "Decline her request":
+                    narrator"Octavia: I'm not a fan of horror. Bet if I pass up on this"
+                    narrator"Alexie: You should come. Here are the details"
+                    narrator"Octavia laid back in her desk"
+                    o"I guess it's a date"
+
+
     else:
-
+        #expand meow
+        narrator"After Octavia had finished her school work, she saw that there was a sale on movie tickets online"
+        o"{i}Oh that'll be nice for a little break. What movie should I watch?{/i}"
+        menu:
+            "The Conjuring":
+                $ genre="horror"
+                o"I don't really like scary movies, but it's always nice to get out their comfort zone"
+            "10 Things I Hate About You":
+                $ genre="romance"
+                o"I love a good romance movie and this is a classic"
+    jump movie_day
     
-    
 
-    
-
-
-
+label movie_day:
+    show bg empty
+    hide octavia
+    narrator"The showing for the movie was at 8:30 am. The theatre was only a few blocks away, so octavia got there relatively early to prepare her "
+    show bg movies
+    show octavia with moveinright
+    narrator"Upon entering she sees Alexie in line for popcorn"
+    if movie==True:
+        narrator "Octavia runs over to her excitedly"
+        show alexie with moveinleft
+        a"Oh hey, you made it"
+        o"Yeah, I am so excited for this movie. Scared. But im excited I am seeing it with you."
+        narrator"They both walk into the theater for the movie"
+    else:
+        narrator"Not having anticipated Alexie's presence, she walks over to talk to her, curious about what movie she is seeing"
+        show alexie with moveinleft
+        o"Alexie?"
+        narrator"Alexie turns around in a bit of a shock, calming down when she sees it is Octavia"
+        a"Octavia? I didn't expect to see you here, what movie are you watching?"
+        if genre ="horror":
+            o"I am going to see The Conjuring"
+            a"Me too! How about we see it together"
+            o"Alright"
+        else:
+            o"I am seeing 10 Things I Hate About You"
+            a"Oh it's that one romance movie right?"
+            o"Yeah, what movie are you seeing?"
+            a"The Conjuring"
+            o"Oh I have been wanting to see that movie for a while now, but I'm too scared to see it alone"
+            a"Well I have an extra ticket anyway sooo"
+            narrator "Octavia's eyes lit up when she heard that"
+            o"Yeah, I didn't buy my tickets yet"
+            narrator"Alexie took out her extra ticket and they walked into the theater together"
+    show 
         
     
