@@ -30,7 +30,8 @@ image bg schoolyard = im.Scale("yard.png",1920,1080)
 image bg library = im.Scale("library.png",1920,1080)
 image bg sidewalk = im.Scale("sidewalk.png",1920,1080)
 image bg movie = im.Scale("movies.png",1920,1080)
-image bg movie = im.Scale("movies.png",1920,1080)
+image bg chair = im.Scale("chairs.png",1920,1080)
+image bg cafe = im.Scale("cafe.png",1920,1080)
 
 
 #Variables
@@ -464,6 +465,28 @@ label movie_day:
             narrator "Octavia's eyes lit up when she heard that"
             o"Yeah, I didn't buy my tickets yet"
             narrator"Alexie took out her extra ticket and they walked into the theater together"
-    show 
+    hide alexie with moveoutright
+    hide octavia with moveoutright
+    show bg chairs
+    show alexie with moveinright
+    show octavia with moveinright
+    narrator"They both settled into their chairs as the movie started"
+    hide alexie
+    hide octavia
+    show bg empty
+    narrator"At the end of the movie, the two went out to a cafe to talk"
+    show bg cafe
+    show alexie
+    show octavia
+    o"This is a nice cafe, thanks for bringing me here"
+    a"Of course, um, there is something I need to talk to you about something"
+    narrator"Octavia leans in with intruige"
+    o"Yeah, what is it?"
+    a"So you know the cat from the other time?"
+
+
+
+
+
         
     
