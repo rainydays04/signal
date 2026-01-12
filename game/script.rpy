@@ -488,7 +488,11 @@ label movie_day:
     o"She just told me to be careful...of you"
     narrator"Alexie leaned back in frustration"
     a"Sorry you had to go through that, I know a talking cat is very...strange"
-    o"What's stranger is this whole interaction,"
+    o"What's stranger is this whole interaction, you clearly have something to tell me"
+    narrator"Alexie takes a long exasperated breathe"
+    a"You know like, magical girls in those boooks and stories?"
+    o"Yeah"
+    
 
 
         
