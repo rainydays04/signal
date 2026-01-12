@@ -482,10 +482,13 @@ label movie_day:
     a"Of course, um, there is something I need to talk to you about something"
     narrator"Octavia leans in with intruige"
     o"Yeah, what is it?"
-    a"So you know the cat from the other time?"
-
-
-
+    a"So you know the cat from lunch?"
+    a"I NEED you to tell me what she told "
+    narrator"Octavia leaned back, suprised by Alexie's insistance"
+    o"She just told me to be careful...of you"
+    narrator"Alexie leaned back in frustration"
+    a"Sorry you had to go through that, I know a talking cat is very...strange"
+    o"What's stranger is this whole interaction,"
 
 
         
