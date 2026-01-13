@@ -436,12 +436,12 @@ label movie_day:
     show bg empty
     hide octavia
     narrator"The showing for the movie was at 8:30 am. The theatre was only a few blocks away, so octavia got there relatively early to prepare her "
-    show bg movies
-    show octavia with moveinright
+    show bg movie
+    show octavia at right with moveinright
     narrator"Upon entering she sees Alexie in line for popcorn"
     if movie==True:
         narrator "Octavia runs over to her excitedly"
-        show alexie with moveinleft
+        show alexie at left with moveinleft
         a"Oh hey, you made it"
         o"Yeah, I am so excited for this movie. Scared. But im excited I am seeing it with you."
         narrator"They both walk into the theater for the movie"
@@ -451,7 +451,7 @@ label movie_day:
         o"Alexie?"
         narrator"Alexie turns around in a bit of a shock, calming down when she sees it is Octavia"
         a"Octavia? I didn't expect to see you here, what movie are you watching?"
-        if genre ="horror":
+        if genre =="horror":
             o"I am going to see The Conjuring"
             a"Me too! How about we see it together"
             o"Alright"
@@ -467,17 +467,17 @@ label movie_day:
             narrator"Alexie took out her extra ticket and they walked into the theater together"
     hide alexie with moveoutright
     hide octavia with moveoutright
-    show bg chairs
-    show alexie with moveinright
-    show octavia with moveinright
+    show bg chair
+    show alexie at right with moveinright
+    show octavia at left with moveinright
     narrator"They both settled into their chairs as the movie started"
-    hide alexie
-    hide octavia
+    hide alexie 
+    hide octavia 
     show bg empty
     narrator"At the end of the movie, the two went out to a cafe to talk"
     show bg cafe
-    show alexie
-    show octavia
+    show alexie at left
+    show octavia at right
     o"This is a nice cafe, thanks for bringing me here"
     a"Of course, um, there is something I need to talk to you about something"
     narrator"Octavia leans in with intruige"
@@ -492,6 +492,10 @@ label movie_day:
     narrator"Alexie takes a long exasperated breathe"
     a"You know like, magical girls in those boooks and stories?"
     o"Yeah"
+    a"I work for a corperation of them..."
+    narrator"Octavia's eyes widened in suprise and confusion."
+    o"Corperation?"
+    narrator "Alexie nodded and soon Octavia's vision faded to black"
     
 
 
